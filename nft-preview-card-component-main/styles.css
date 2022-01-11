@@ -1,0 +1,190 @@
+/* General Styles */
+
+:root{
+    --light-color:#f7faff;
+    --light-color-opacity:rgba(247, 250, 255, 0.187);
+    --dark-color:#142032;
+    --dark-color-2:#121d2d;
+    --main-blue:#1f2b42;
+    --light-blue:#7d90b3;
+    --accent-color-1:hsl(228, 45%, 44%);
+    --accent-color-2:#69fffa;
+    --accent-color-2-op:#0ca0aba5;
+    --main-radius: 15px;
+    --border-radius-snd:10px;
+}
+
+html{
+    font-size:80%;
+}
+body{
+    margin: 0;
+    min-height: 100vh;
+    text-decoration: none;
+    text-align: center;
+    background: var(--dark-color);
+    color: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    color: var(--accent-color-1);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card Styles */
+
+.card-container{
+    background: var(--main-blue);
+    margin: 0 auto;
+    height: 70%vh;
+    max-width: 23em;
+    align-self: center;
+    justify-self: end;
+    border-radius: var(--main-radius);
+    padding: 26px;
+    border: 1px solid var(--dark-color);
+    box-shadow: 10px 15px 1px 5px var(--dark-color-2);
+    box-shadow: 9px 20px 2px 8px var(--dark-color-2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main Image Styles */
+
+.img-container{
+    border-radius: var(--border-radius-snd);
+    position: relative;
+    margin:0;
+    padding: 0;
+}
+
+
+.main-img{
+   max-width: 100%;
+   height:auto;
+   object-fit: cover;
+   border-radius: var(--border-radius-snd);
+}
+ 
+
+.view-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    margin:0;
+    padding: 0;
+} 
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: var(--accent-color-2-op);
+  }
+  
+  /* When you mouse over the container, fade in the overlay icon*/
+  .container:hover .overlay {
+    opacity: 1;
+  }
+
+
+/* Textual Information */
+  
+
+.about{
+    text-align: left;
+}
+
+.about-h1{
+    font-size: 1.4rem;
+    letter-spacing: 1.2px;
+}
+
+.about-h1:hover, 
+.about-h1:active{
+    color: var(--accent-color-2);
+}
+
+.about-p{
+   font-size: 1.25rem; 
+   font-weight: 400;
+   color: var(--light-blue);
+}
+
+.pricing{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1em; 
+}
+.price-amount{
+    color: var(--accent-color-2);
+    font-weight: 900;
+}
+
+.days-remaining{
+    color: var(--light-blue);
+}
+
+.card-footer{
+    display: flex;
+    font-size: 0.8rem;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: .1px solid var(--light-color-opacity);
+}
+
+.footer-profile-pic{
+    width: 8%;
+    height: 8%;
+    border: 1px solid var(--light-color);
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.seller-intro{
+    color: var(--light-blue);
+}
+
+.seller-name:hover{
+    color: var(--accent-color-2);
+}
+
+
+
+/* Footer */
+
+.attribution{
+    font-size: 1.01rem;
+    margin-top: 2em;
+}
+
+.attribution a{
+    color: var(--light-blue);
+}
+
+.attribution a:hover a:active{
+    color: var(--accent-color-2);
+}
+
+.attribution a:visited{
+    color: var(--light-color-opacity);
+}
